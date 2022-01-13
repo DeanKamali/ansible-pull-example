@@ -1,10 +1,7 @@
 ---
-- hosts: all
-
+- hosts: localhost
   tasks:
-  - name: install example application
-    copy: 
-      src: ansible_test_app 
-      dest: /tmp/
-      owner: root
-      group: root
+  - name: Install ansible
+    package:
+      name: ansible
+      state: installed
